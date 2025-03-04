@@ -24,7 +24,7 @@ install_zabbix_agent() {
             apt update
             apt install -y zabbix-agent
             ;;
-        centos|rhel|rocky|almalinux)
+        centos|rhel|rocky|almalinux|fedora)
             rpm -Uvh https://repo.zabbix.com/zabbix/6.0/rhel/$(rpm -E %rhel)/x86_64/zabbix-release-6.0-2.el$(rpm -E %rhel).noarch.rpm
             dnf clean all
             dnf install -y zabbix-agent
@@ -32,6 +32,13 @@ install_zabbix_agent() {
         alpine)
             apk update
             apk add curl zabbix-agent
+            ;;
+        arch|manjaro)
+            pacman -Sy --noconfirm zabbix-agent
+            ;;
+        opensuse|sles)
+            zypper refresh
+            zypper install -y zabbix-agent
             ;;
         *)
             echo "Système non supporté."
@@ -46,6 +53,8 @@ configure_zabbix_agent() {
     if [[ "$OS" == "alpine" ]]; then
         rc-update add zabbix-agentd
         service zabbix-agentd start
+    elif [[ "$OS" == "arch" || "$OS" == "manjaro" ]]; then
+        systemctl enable --now zabbix-agent
     else
         systemctl enable --now zabbix-agent
     fi

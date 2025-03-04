@@ -7,16 +7,29 @@ Le script prend en charge les distributions suivantes :
 - Ubuntu
 - Debian
 - CentOS
-- Rhel
-- Rocky 
-- Alma 
-- Alpine
+- RHEL
+- Rocky Linux
+- AlmaLinux
+- Fedora
+- Alpine Linux
+- Arch Linux
+- Manjaro
+- openSUSE
+- SLES
 
 ## Prérequis
 - Accès root ou sudo
 - Connexion Internet pour télécharger les paquets
 
 ## Installation
+
+### Méthode 1 : 
+
+Exécutez la commande : 
+```curl -sSL https://raw.githubusercontent.com/AlexKientz67/Zabbix-Linux-AutoInstall/main/install.bash | bash -s <IP_ZABBIX_SERVER>``` 
+
+### Méthode 2 :
+
 Clonez le dépôt et exécutez le script :
 
 ```bash
@@ -55,4 +68,3 @@ apt remove --purge -y zabbix-agent
 
 ## Licence
 Ce projet n'est pas soumis a license.
-
