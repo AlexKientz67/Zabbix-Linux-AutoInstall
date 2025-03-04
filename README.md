@@ -53,9 +53,6 @@ Si nécessaire, vous pouvez supprimer l'agent Zabbix avec la commande adaptée �
 apt remove --purge -y zabbix-agent
 ```
 
-## Auteurs
-- [Votre Nom ou Pseudo]
-
 ## Licence
-Ce projet est sous licence MIT.
+Ce projet n'est pas soumis a license.
 
