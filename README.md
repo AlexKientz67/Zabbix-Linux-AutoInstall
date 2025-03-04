@@ -26,7 +26,8 @@ Le script prend en charge les distributions suivantes :
 ### Méthode 1 : 
 
 Exécutez la commande : 
-```curl -sSL https://raw.githubusercontent.com/AlexKientz67/Zabbix-Linux-AutoInstall/main/install.bash | bash -s <IP_ZABBIX_SERVER>``` 
+```curl -sSL https://raw.githubusercontent.com/AlexKientz67/Zabbix-Linux-AutoInstall/main/install.bash | bash -s <IP_ZABBIX_SERVER>
+``` 
 
 ### Méthode 2 :
 
