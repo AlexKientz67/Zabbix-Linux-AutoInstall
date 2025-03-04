@@ -35,8 +35,8 @@ curl -sSL https://raw.githubusercontent.com/AlexKientz67/Zabbix-Linux-AutoInstal
 Clonez le dépôt et exécutez le script :
 
 ```bash
-git clone <URL_DU_REPO>
-cd <NOM_DU_REPO>
+git clone https://github.com/AlexKientz67/Zabbix-Linux-AutoInstall.git
+cd Zabbix-Linux-AutoInstall
 chmod +x install_zabbix.sh
 ./install_zabbix.sh <IP_ZABBIX_SERVER>
 ```
